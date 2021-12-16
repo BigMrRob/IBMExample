@@ -1,7 +1,16 @@
+function resetForm() {
+  var rate = document.getElementById("rate");
+  var years = document.getElementById("years");
+  var amount = document.getElementById("principal");
+
+  rate.innerHTML = "10%";
+  amount.innerHTML = "";
+}
+
 function compute() {
   var principal = document.getElementById("principal").value;
 
-  if (principal < 0) {
+  if (principal <= 0) {
     alert("Principal must be positive");
     principal.focus();
     return;
